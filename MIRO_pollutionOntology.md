@@ -1,34 +1,9 @@
 ﻿MIRO – Minimum Information for Reporting of an Ontology
 ==============
 
-## Published 22 December 2017
-
-**Editors**:
-
-Robert Stevens, Manchester University
-
-James Malone, FactBio Limited
-
-Chris Mungall, National Evolutionary Synthesis Center, Lawrence Berkeley Labs, Gene Ontology Consortium
-
-Nicolas Matentzoglu, Manchester University
-
-**Edit history:**
-
-| Version | Date | Contributors | Changes |
-|---|---|---|---|
-| 0.1 | 16.05.2016 | Robert Stevens, James Malone, Chris Mungall, Nicolas Matentzoglu | First version |
-| 0.2 | 27.05.2016 | James Malone|Review first version for wording and examples |
-| 0.3 | 28.06.2016 | Nicolas Matentzoglu | Unified capitalisation in Information Item names |
-| 0.4 | 02.12.2016 | James Malone | Add elucidation to items |
-| 0.5 | 12.03.2017 | Robert Stevens, James Malone, Chris Mungall, Nicolas Matentzoglu | First public release |
-| 0.6 | 13.08.2017 | James Malone | Update to reflect reviews from submitted publication |
 ----
 
-# Summary 
-This document contains the Minimum Information for Reporting of an Ontology (MIRO) guidelines. 
 
-# Guidelines
 
 ## A. Basics
 
@@ -36,10 +11,11 @@ This document contains the Minimum Information for Reporting of an Ontology (MIR
 
 |  | Specification |
 |---|---|
-| **Description:** | The full name of the ontology, including the acronym and the version number referred to in the report. |
+| **Description:** | Sporting Activities and Pollution Ontology  |
 | **Importance:** | MUST |
-| **Example:** | Gene Ontology (GO), v2.13; Foundational Model of Anatomy Ontology (FMA), v4.22; |
 ----
+
+Sporting Activities and Pollution Ontology
 
 ### A.2 Ontology owner
 
