@@ -14,17 +14,18 @@ Sporting Activities and Pollution Ontology
 ### A.2 Ontology owner
 
 Sonia Ben Ayed (sonia.ben_ayed@telecom-sudparis.eu) - Telecom SudParis
+\n
 Fabiola Espinoza (fabiola.espinoza_castellon@telecom-sudparis.eu) - Telecom SudParis
 
 ### A.3 Ontology license
 
 No license
-----
+
 
 ### A.4 Ontology URL
 
 https://github.com/fabiola-espinoza-castellon/ontology-project/blob/master/PollutionApp.owl
-----
+
 
 ### A.5 Ontology repository
 
