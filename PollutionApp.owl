@@ -1,0 +1,410 @@
+Prefix(:=<http://www.semanticweb.org/fabiola/ontologies/2019/9/untitled-ontology-3#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/fabiola/ontologies/2019/9/untitled-ontology-3>
+
+Declaration(Class(:Activity))
+Declaration(Class(:Address))
+Declaration(Class(:AlbaicinAddress))
+Declaration(Class(:AlhambraAddress))
+Declaration(Class(:ArrivalAddress))
+Declaration(Class(:BikingActivity))
+Declaration(Class(:CityOrientation))
+Declaration(Class(:DepartureAddress))
+Declaration(Class(:EastCity))
+Declaration(Class(:Environment))
+Declaration(Class(:GranadaJoggPath))
+Declaration(Class(:HighNoisePollutionLevel))
+Declaration(Class(:HighPollutionLevel))
+Declaration(Class(:HighestPollutionCityLevel))
+Declaration(Class(:IndiaGateAddress))
+Declaration(Class(:LessPollutedPath))
+Declaration(Class(:LouvreAddress))
+Declaration(Class(:LowNoisePollutionLevel))
+Declaration(Class(:LowPollutionLevel))
+Declaration(Class(:LowestPollutionCityLevel))
+Declaration(Class(:MediumNoisePollutionLevel))
+Declaration(Class(:MediumPollutionCityLevel))
+Declaration(Class(:MontmartreAddress))
+Declaration(Class(:NaturalEnvironment))
+Declaration(Class(:NaturalPath))
+Declaration(Class(:NewDelhiPath))
+Declaration(Class(:NoisePollutionLevel))
+Declaration(Class(:NormalPollutionLevel))
+Declaration(Class(:NorthCity))
+Declaration(Class(:ParisByBikePath))
+Declaration(Class(:Path))
+Declaration(Class(:PollutionCityLevel))
+Declaration(Class(:PollutionLevel))
+Declaration(Class(:RedFortAddress))
+Declaration(Class(:RelaxingActivity))
+Declaration(Class(:RunningActivity))
+Declaration(Class(:SouthCity))
+Declaration(Class(:TourPaths))
+Declaration(Class(:UrbanEnvironment))
+Declaration(Class(:UrbanPath))
+Declaration(Class(:WalkingActivity))
+Declaration(Class(:WestCity))
+Declaration(ObjectProperty(:hasActivity))
+Declaration(ObjectProperty(:hasAddress))
+Declaration(ObjectProperty(:hasArrivalAddress))
+Declaration(ObjectProperty(:hasDepartureAddress))
+Declaration(ObjectProperty(:hasEnvironment))
+Declaration(ObjectProperty(:hasNoisePollutionLevel))
+Declaration(ObjectProperty(:hasOrientation))
+Declaration(ObjectProperty(:hasPollutionCityLevel))
+Declaration(ObjectProperty(:hasPollutionLevel))
+Declaration(ObjectProperty(:isActivityOf))
+Declaration(ObjectProperty(:isAddressOf))
+Declaration(ObjectProperty(:isArrivalAddressOf))
+Declaration(ObjectProperty(:isDepartureAddressOf))
+Declaration(ObjectProperty(:isEnvironmentOf))
+Declaration(ObjectProperty(:isNoisePollutionLevel))
+Declaration(ObjectProperty(:isOrientationOf))
+Declaration(ObjectProperty(:isPollutionCityLevelOf))
+Declaration(ObjectProperty(:isPollutionLevelOf))
+Declaration(DataProperty(:Address))
+Declaration(NamedIndividual(:Louvre))
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasActivity (:hasActivity)
+
+InverseObjectProperties(:hasActivity :isActivityOf)
+FunctionalObjectProperty(:hasActivity)
+ObjectPropertyDomain(:hasActivity :Path)
+ObjectPropertyRange(:hasActivity :Activity)
+
+# Object Property: :hasAddress (:hasAddress)
+
+InverseObjectProperties(:hasAddress :isAddressOf)
+
+# Object Property: :hasArrivalAddress (:hasArrivalAddress)
+
+SubObjectPropertyOf(:hasArrivalAddress :hasAddress)
+InverseObjectProperties(:hasArrivalAddress :isArrivalAddressOf)
+FunctionalObjectProperty(:hasArrivalAddress)
+ObjectPropertyDomain(:hasArrivalAddress :Path)
+ObjectPropertyRange(:hasArrivalAddress :ArrivalAddress)
+
+# Object Property: :hasDepartureAddress (:hasDepartureAddress)
+
+SubObjectPropertyOf(:hasDepartureAddress :hasAddress)
+InverseObjectProperties(:hasDepartureAddress :isDepartureAddressOf)
+FunctionalObjectProperty(:hasDepartureAddress)
+ObjectPropertyDomain(:hasDepartureAddress :Path)
+ObjectPropertyRange(:hasDepartureAddress :DepartureAddress)
+
+# Object Property: :hasEnvironment (:hasEnvironment)
+
+InverseObjectProperties(:hasEnvironment :isEnvironmentOf)
+FunctionalObjectProperty(:hasEnvironment)
+ObjectPropertyDomain(:hasEnvironment :Path)
+ObjectPropertyRange(:hasEnvironment :Environment)
+
+# Object Property: :hasNoisePollutionLevel (:hasNoisePollutionLevel)
+
+InverseObjectProperties(:hasNoisePollutionLevel :isNoisePollutionLevel)
+FunctionalObjectProperty(:hasNoisePollutionLevel)
+ObjectPropertyDomain(:hasNoisePollutionLevel :Path)
+ObjectPropertyRange(:hasNoisePollutionLevel :NoisePollutionLevel)
+
+# Object Property: :hasOrientation (:hasOrientation)
+
+InverseObjectProperties(:hasOrientation :isOrientationOf)
+InverseFunctionalObjectProperty(:hasOrientation)
+ObjectPropertyDomain(:hasOrientation :Path)
+ObjectPropertyRange(:hasOrientation :CityOrientation)
+
+# Object Property: :hasPollutionCityLevel (:hasPollutionCityLevel)
+
+InverseObjectProperties(:hasPollutionCityLevel :isPollutionCityLevelOf)
+FunctionalObjectProperty(:hasPollutionCityLevel)
+ObjectPropertyDomain(:hasPollutionCityLevel :Path)
+ObjectPropertyRange(:hasPollutionCityLevel :PollutionCityLevel)
+
+# Object Property: :hasPollutionLevel (:hasPollutionLevel)
+
+InverseObjectProperties(:hasPollutionLevel :isPollutionLevelOf)
+FunctionalObjectProperty(:hasPollutionLevel)
+ObjectPropertyDomain(:hasPollutionLevel :Path)
+ObjectPropertyRange(:hasPollutionLevel :PollutionLevel)
+
+# Object Property: :isActivityOf (:isActivityOf)
+
+FunctionalObjectProperty(:isActivityOf)
+InverseFunctionalObjectProperty(:isActivityOf)
+ObjectPropertyDomain(:isActivityOf :Activity)
+ObjectPropertyRange(:isActivityOf :Path)
+
+# Object Property: :isArrivalAddressOf (:isArrivalAddressOf)
+
+SubObjectPropertyOf(:isArrivalAddressOf :isAddressOf)
+ObjectPropertyDomain(:isArrivalAddressOf :ArrivalAddress)
+ObjectPropertyRange(:isArrivalAddressOf :Path)
+
+# Object Property: :isDepartureAddressOf (:isDepartureAddressOf)
+
+SubObjectPropertyOf(:isDepartureAddressOf :isAddressOf)
+ObjectPropertyDomain(:isDepartureAddressOf :DepartureAddress)
+ObjectPropertyRange(:isDepartureAddressOf :Path)
+
+# Object Property: :isEnvironmentOf (:isEnvironmentOf)
+
+FunctionalObjectProperty(:isEnvironmentOf)
+InverseFunctionalObjectProperty(:isEnvironmentOf)
+ObjectPropertyDomain(:isEnvironmentOf :Environment)
+ObjectPropertyRange(:isEnvironmentOf :Path)
+
+# Object Property: :isNoisePollutionLevel (:isNoisePollutionLevel)
+
+FunctionalObjectProperty(:isNoisePollutionLevel)
+InverseFunctionalObjectProperty(:isNoisePollutionLevel)
+ObjectPropertyDomain(:isNoisePollutionLevel :NoisePollutionLevel)
+ObjectPropertyRange(:isNoisePollutionLevel :Path)
+
+# Object Property: :isOrientationOf (:isOrientationOf)
+
+SubObjectPropertyOf(:isOrientationOf owl:topObjectProperty)
+ObjectPropertyDomain(:isOrientationOf :CityOrientation)
+ObjectPropertyRange(:isOrientationOf :Path)
+
+# Object Property: :isPollutionCityLevelOf (:isPollutionCityLevelOf)
+
+FunctionalObjectProperty(:isPollutionCityLevelOf)
+InverseFunctionalObjectProperty(:isPollutionCityLevelOf)
+ObjectPropertyDomain(:isPollutionCityLevelOf :PollutionCityLevel)
+ObjectPropertyRange(:isPollutionCityLevelOf :Path)
+
+# Object Property: :isPollutionLevelOf (:isPollutionLevelOf)
+
+FunctionalObjectProperty(:isPollutionLevelOf)
+InverseFunctionalObjectProperty(:isPollutionLevelOf)
+ObjectPropertyDomain(:isPollutionLevelOf :PollutionLevel)
+ObjectPropertyRange(:isPollutionLevelOf :Path)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Activity (:Activity)
+
+
+# Class: :Address (:Address)
+
+
+# Class: :AlbaicinAddress (:AlbaicinAddress)
+
+SubClassOf(:AlbaicinAddress :Address)
+
+# Class: :AlhambraAddress (:AlhambraAddress)
+
+SubClassOf(:AlhambraAddress :Address)
+
+# Class: :ArrivalAddress (:ArrivalAddress)
+
+SubClassOf(:ArrivalAddress :Address)
+
+# Class: :BikingActivity (:BikingActivity)
+
+SubClassOf(:BikingActivity :Activity)
+
+# Class: :CityOrientation (:CityOrientation)
+
+
+# Class: :DepartureAddress (:DepartureAddress)
+
+SubClassOf(:DepartureAddress :Address)
+
+# Class: :EastCity (:EastCity)
+
+SubClassOf(:EastCity :CityOrientation)
+DisjointClasses(:EastCity :WestCity)
+
+# Class: :Environment (:Environment)
+
+
+# Class: :GranadaJoggPath (:GranadaJoggPath)
+
+SubClassOf(:GranadaJoggPath :TourPaths)
+SubClassOf(:GranadaJoggPath ObjectAllValuesFrom(:hasActivity :RunningActivity))
+SubClassOf(:GranadaJoggPath ObjectAllValuesFrom(:hasArrivalAddress :AlbaicinAddress))
+SubClassOf(:GranadaJoggPath ObjectAllValuesFrom(:hasDepartureAddress :AlhambraAddress))
+SubClassOf(:GranadaJoggPath ObjectAllValuesFrom(:hasEnvironment :NaturalEnvironment))
+SubClassOf(:GranadaJoggPath ObjectAllValuesFrom(:hasOrientation :NorthCity))
+DisjointClasses(:GranadaJoggPath :ParisByBikePath)
+
+# Class: :HighNoisePollutionLevel (:HighNoisePollutionLevel)
+
+SubClassOf(:HighNoisePollutionLevel :NoisePollutionLevel)
+
+# Class: :HighPollutionLevel (:HighPollutionLevel)
+
+SubClassOf(:HighPollutionLevel :PollutionLevel)
+
+# Class: :HighestPollutionCityLevel (:HighestPollutionCityLevel)
+
+SubClassOf(:HighestPollutionCityLevel :PollutionCityLevel)
+
+# Class: :IndiaGateAddress (:IndiaGateAddress)
+
+SubClassOf(:IndiaGateAddress :Address)
+
+# Class: :LessPollutedPath (:LessPollutedPath)
+
+SubClassOf(:LessPollutedPath :Path)
+SubClassOf(:LessPollutedPath ObjectSomeValuesFrom(:hasPollutionCityLevel :LowestPollutionCityLevel))
+SubClassOf(:LessPollutedPath ObjectAllValuesFrom(:hasPollutionCityLevel :LowestPollutionCityLevel))
+
+# Class: :LouvreAddress (:LouvreAddress)
+
+SubClassOf(:LouvreAddress :Address)
+
+# Class: :LowNoisePollutionLevel (:LowNoisePollutionLevel)
+
+SubClassOf(:LowNoisePollutionLevel :NoisePollutionLevel)
+
+# Class: :LowPollutionLevel (:LowPollutionLevel)
+
+SubClassOf(:LowPollutionLevel :PollutionLevel)
+
+# Class: :LowestPollutionCityLevel (:LowestPollutionCityLevel)
+
+SubClassOf(:LowestPollutionCityLevel :PollutionCityLevel)
+
+# Class: :MediumNoisePollutionLevel (:MediumNoisePollutionLevel)
+
+SubClassOf(:MediumNoisePollutionLevel :NoisePollutionLevel)
+
+# Class: :MediumPollutionCityLevel (:MediumPollutionCityLevel)
+
+SubClassOf(:MediumPollutionCityLevel :PollutionCityLevel)
+
+# Class: :MontmartreAddress (:MontmartreAddress)
+
+SubClassOf(:MontmartreAddress :Address)
+
+# Class: :NaturalEnvironment (:NaturalEnvironment)
+
+SubClassOf(:NaturalEnvironment :Environment)
+DisjointClasses(:NaturalEnvironment :UrbanEnvironment)
+
+# Class: :NaturalPath (:NaturalPath)
+
+SubClassOf(:NaturalPath :Path)
+SubClassOf(:NaturalPath ObjectSomeValuesFrom(:hasEnvironment :NaturalEnvironment))
+SubClassOf(:NaturalPath ObjectSomeValuesFrom(:hasNoisePollutionLevel :LowNoisePollutionLevel))
+SubClassOf(:NaturalPath ObjectAllValuesFrom(:hasEnvironment :NaturalEnvironment))
+SubClassOf(:NaturalPath ObjectAllValuesFrom(:hasNoisePollutionLevel :LowNoisePollutionLevel))
+DisjointClasses(:NaturalPath :UrbanPath)
+
+# Class: :NewDelhiPath (:NewDelhiPath)
+
+SubClassOf(:NewDelhiPath :TourPaths)
+SubClassOf(:NewDelhiPath ObjectSomeValuesFrom(:hasPollutionLevel :HighPollutionLevel))
+SubClassOf(:NewDelhiPath ObjectAllValuesFrom(:hasArrivalAddress :RedFortAddress))
+SubClassOf(:NewDelhiPath ObjectAllValuesFrom(:hasDepartureAddress :IndiaGateAddress))
+SubClassOf(:NewDelhiPath ObjectAllValuesFrom(:hasEnvironment :UrbanEnvironment))
+SubClassOf(:NewDelhiPath ObjectAllValuesFrom(:hasOrientation :SouthCity))
+SubClassOf(:NewDelhiPath ObjectAllValuesFrom(:hasPollutionCityLevel :LowestPollutionCityLevel))
+
+# Class: :NoisePollutionLevel (:NoisePollutionLevel)
+
+
+# Class: :NormalPollutionLevel (:NormalPollutionLevel)
+
+SubClassOf(:NormalPollutionLevel :PollutionLevel)
+
+# Class: :NorthCity (:NorthCity)
+
+SubClassOf(:NorthCity :CityOrientation)
+DisjointClasses(:NorthCity :SouthCity)
+
+# Class: :ParisByBikePath (:ParisByBikePath)
+
+SubClassOf(:ParisByBikePath :TourPaths)
+SubClassOf(:ParisByBikePath ObjectAllValuesFrom(:hasActivity :BikingActivity))
+SubClassOf(:ParisByBikePath ObjectAllValuesFrom(:hasArrivalAddress :MontmartreAddress))
+SubClassOf(:ParisByBikePath ObjectAllValuesFrom(:hasDepartureAddress :LouvreAddress))
+SubClassOf(:ParisByBikePath ObjectAllValuesFrom(:hasOrientation :NorthCity))
+SubClassOf(:ParisByBikePath ObjectAllValuesFrom(:hasPollutionCityLevel :LowestPollutionCityLevel))
+
+# Class: :Path (:Path)
+
+SubClassOf(:Path ObjectSomeValuesFrom(:hasActivity :Activity))
+SubClassOf(:Path ObjectSomeValuesFrom(:hasArrivalAddress :ArrivalAddress))
+SubClassOf(:Path ObjectSomeValuesFrom(:hasDepartureAddress :DepartureAddress))
+SubClassOf(:Path ObjectSomeValuesFrom(:hasOrientation :CityOrientation))
+SubClassOf(:Path ObjectSomeValuesFrom(:hasPollutionCityLevel :PollutionCityLevel))
+SubClassOf(:Path ObjectSomeValuesFrom(:hasPollutionLevel :PollutionLevel))
+
+# Class: :PollutionCityLevel (:PollutionCityLevel)
+
+
+# Class: :PollutionLevel (:PollutionLevel)
+
+
+# Class: :RedFortAddress (:RedFortAddress)
+
+SubClassOf(:RedFortAddress :Address)
+
+# Class: :RelaxingActivity (:RelaxingActivity)
+
+SubClassOf(:RelaxingActivity :Activity)
+
+# Class: :RunningActivity (:RunningActivity)
+
+SubClassOf(:RunningActivity :Activity)
+
+# Class: :SouthCity (:SouthCity)
+
+SubClassOf(:SouthCity :CityOrientation)
+
+# Class: :TourPaths (:TourPaths)
+
+SubClassOf(:TourPaths :Path)
+
+# Class: :UrbanEnvironment (:UrbanEnvironment)
+
+SubClassOf(:UrbanEnvironment :Environment)
+
+# Class: :UrbanPath (:UrbanPath)
+
+SubClassOf(:UrbanPath :Path)
+SubClassOf(:UrbanPath ObjectSomeValuesFrom(:hasEnvironment :UrbanEnvironment))
+SubClassOf(:UrbanPath ObjectAllValuesFrom(:hasEnvironment :UrbanEnvironment))
+
+# Class: :WalkingActivity (:WalkingActivity)
+
+SubClassOf(:WalkingActivity :Activity)
+
+# Class: :WestCity (:WestCity)
+
+SubClassOf(:WestCity :CityOrientation)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :Louvre (:Louvre)
+
+ClassAssertion(:Address :Louvre)
+DataPropertyAssertion(:Address :Louvre "Rue de Rivoli, 75001 Paris"^^xsd:string)
+
+
+DisjointClasses(:Activity :Address :CityOrientation :Environment :NoisePollutionLevel :Path :PollutionCityLevel :PollutionLevel)
+DisjointClasses(:Activity :Address :CityOrientation :Environment :Path :PollutionCityLevel :PollutionLevel)
+DisjointClasses(:BikingActivity :RelaxingActivity :RunningActivity :WalkingActivity)
+DisjointClasses(:HighPollutionLevel :LowPollutionLevel :NormalPollutionLevel)
+DisjointClasses(:HighestPollutionCityLevel :LowestPollutionCityLevel :MediumPollutionCityLevel)
+)
